@@ -9,11 +9,12 @@
 #   e. Print out the list again, now sorted alphabetically.
 
 space_shuttles = [
+    'Endeavour',
     'Columbia',
-    'Challenger',
     'Discovery',
     'Atlantis',
-    'Endeavour'
+    'Challenger',
+    'Tardis'
 ]
 
 # Your code here
