@@ -57,7 +57,7 @@ def getContingencyTables(array):
 
     return actual, expected
 
-def getChiSquareStatistic(actual, expected):
+def getChiSquaredStatistic(actual, expected):
     chi = 0
     for row in range(len(actual)):
         for col in range(len(actual[0])):
@@ -67,23 +67,24 @@ def getChiSquareStatistic(actual, expected):
 def getDegreesOfFreedom(contingencyTable):
     return (contingencyTable.shape[0]-1) * (contingencyTable.shape[1]-1)
 
-def chiSquareTest(path, alpha=0.05):
+def chiSquaredTest(path, alpha=0.05):
     data = importCsv(path)
     actual, expected = getContingencyTables(data)
-    chi = getChiSquareStatistic(actual, expected)
+    chi = getChiSquaredStatistic(actual, expected)
     doff = getDegreesOfFreedom(actual)
-    print(f"The chi square statistic is {chi} and the degrees of freedom are {doff}. The alpha value is {alpha}.")
+    print(f"The chi squared statistic is {chi} and the degrees of freedom are {doff}. The alpha value is {alpha}.")
     return
 
+
 """
-    QUESTION 1: Based on the Chi square statistic and the degrees of freedom, is there a significant relationship 
+    QUESTION 1: Based on the Chi squared statistic and the degrees of freedom, is there a significant relationship 
     between time spent in Hawaii and becoming infected with COVID-19 at a significance level (alpha) of 0.05?
 
-    ANSWER: At a significance level of 0.05, the Chi square test suggests that a relationship (does/does not) exist
+    ANSWER: At a significance level of 0.05, the Chi squared test suggests that a relationship (does/does not) exist
     between time spent in Hawaii and becoming infected with COVID-19.
 
 
-    QUESTION 2: If a significance level (alpha) of 0.1 had been used, would our interpretation of the Chi square 
+    QUESTION 2: If a significance level (alpha) of 0.1 had been used, would our interpretation of the Chi squared 
     statistic change? How so?
 
     ANSWER: 
