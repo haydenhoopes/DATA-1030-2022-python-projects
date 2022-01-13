@@ -7,8 +7,10 @@
 # Your code here
 
 
-# 2. Use two nested for loops with the range() function to print out a pyramid in the form: (5 points)
-# Remember that you can prevent the print function from creating a new line by adding 'end': print("Hello World", end=" ")
+# 2. Use two nested for loops with the range() function 
+# to print out a pyramid in the form: (5 points)
+# Remember that you can prevent the print function 
+# from creating a new line by adding 'end': print("Hello World", end=" ")
 
 # 0
 # 0 1

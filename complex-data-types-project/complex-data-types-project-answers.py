@@ -123,7 +123,7 @@ while stillPlaying:
         print("You won the war!!!\n")
 
     playAgain = input("Do you want to play again (y/n)? ")
-    if playAgain is "n":
+    if playAgain == "n":
         stillPlaying = False
         print("Thanks for playing!")
     else:

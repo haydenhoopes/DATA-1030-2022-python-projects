@@ -37,7 +37,7 @@ numbers = [5,5,8,2,9,1,100,34,2,6,7,7,7,3,1,6,60,76,7,2,9,85,3,8,5,23,0,3,69,35,
 #   a. You bought a pet hamster and have to keep it in your backpack since you're at work.
 #      Add the key "pet" with a value of "hamster" to the backpack.
 #   b. Your hamster then ate all the Skittles. Remove them from the list of snacks.
-#   c. At the end of the day, you need to spend $2.00 to buy soe wood shavings. Print out how much
+#   c. At the end of the day, you need to spend $2.00 to buy some wood shavings. Print out how much
 #      money you have. Then, subtract the $2.00 from the money in the backpack.
 #   d. Print out the final dictionary to see what you ended up with.
 
