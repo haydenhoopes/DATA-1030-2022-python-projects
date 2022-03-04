@@ -27,7 +27,10 @@ def negativeNumbersExceptNegative57(array):
 
 # ********  QUESTION 3  ********
 # Write a function that takes an array and a number, and retrieves an array of each number immediately to the left and right of that number. 
-# The order of the values is not important.
+# The order of the values is not important. Remember that the `.where()` function returns a tuple where the 0th item is the array of indexes.
+# Also remember that you can join two arrays together using the NumPy
+# concatenate function, where the first argument is a tuple that contains each array to be merged.
+# np.concatenate((arr1, arr2))
 def leftAndRight(array, num):
     # Your code here
     return

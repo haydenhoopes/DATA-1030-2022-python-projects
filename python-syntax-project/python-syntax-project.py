@@ -25,10 +25,12 @@
 
 
 # ********  QUESTION 3  ********
-# Make a function called typeOfVariable() that accepts a single variable.
-# This function should print (not return) the variable and its type.
-# Below the function definition, call the function using a made up variable
-# to show that it works.
+# Make a function called typeOfVariable() that accepts a parameter called 
+# variable. This function should print but not return variable and its type 
+# to the console. Below the function definition, you can create a variable 
+# (using a name other than 'variable') and then call the function, or simply 
+# enter the variable itself into the typeOfVariable() function to show that 
+# it works.
 
 # Your code here
 def typeOfVariable(variable):
