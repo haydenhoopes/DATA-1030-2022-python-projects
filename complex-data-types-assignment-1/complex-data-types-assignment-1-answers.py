@@ -2,60 +2,66 @@
 # BTECH #: 
 
 
-# 1. Create a new list called flags_of_the_world. Give this list strings of at least five countries whose flags you like.
+# 1. Create a new list called world_flags. Give this list strings of at least five countries whose flags you like.
+#    Print out the type of world_flags to make sure it's a list.
 
-flags_of_the_world = ['United States of America', 'Colombia', 'Japan', 'Spain', 'Cuba']
+world_flags = ['United States of America', 'Colombia', 'Japan', 'Spain', 'Cuba']
+print(type(world_flags))
 
 
-# 2. Use indexing to access the second flag in your list flags_of_the_world. Remember that in Python, indexes
+# 2. Use indexing to access the second flag in your list world_flags. Remember that in Python, indexes
 #    start with 0, so the second item would be at index 1. Print out that flag.
 
-second_flag = flags_of_the_world[1]
+second_flag = world_flags[1]
 print(second_flag)
 
 
-# 3. Print out the length of your list flags_of_the_world using the len() function.
+# 3. Print out the length of your list world_flags using the len() function.
 
-length_of_flags_list = len(flags_of_the_world)
+length_of_flags_list = len(world_flags)
 print(length_of_flags_list)
 
 
-# 4. Add "Mars" to the flags_of_the_world list using the .append() method.
+# 4. Add "Mars" to the world_flags list using the .append() method. Print out world_flags to make sure
+#    Mars was added correctly.
 
-flags_of_the_world.append("Mars")
+world_flags.append("Mars")
+print(world_flags)
 
 
-# 5. Print out the flags_of_the_world list. Then, use the .sort() method on the list and print it again.
+# 5. Use the .sort() method on the list and print it out. Notice that the list is now sorted alphabetically!
 
-print(flags_of_the_world)
-flags_of_the_world.sort()
-print(flags_of_the_world)
+world_flags.sort()
+print(world_flags)
 
 
 # 6. Create a new dictionary called my_dream_car. Make up attributes for the car as keys in the dictionary, and give
-#    them appropriate values. You must at least give my_dream_car a name (string), year (integer), mpg (float),
-#    brand (string), and a list of places the car has been to (list of strings).
+#    them appropriate values. You must at least give my_dream_car a make (string), year (integer), mpg (float),
+#    model (string), and a list of places you want to take the car (list of strings).
 
 my_dream_car = {
-    "name": "Rojita",
+    "make": "Chevrolet",
     "year": 2007,
     "mpg": 32.4,
-    "brand": "Chevrolet Aveo",
-    "places_travelled": ['Salt Lake City', 'Logan', 'Boise']
+    "model": "Aveo",
+    "places_to_go": ['Salt Lake City', 'Logan', 'Boise']
 }
 
 
-# 7. Print out the name and the year of my_dream_car by accessing the keys of the dictionary.
+# 7. Print out the year, make, and model of my_dream_car by accessing the keys of the dictionary in a single
+#    print statement. Then print out the first location of the list of places you want to take the car.
 
-print(my_dream_car["name"])
-print(my_dream_car["year"])
+print(my_dream_car['year'], my_dream_car['make'], my_dream_car["model"])
+print(my_dream_car['places_to_go'][0])
+
 
 
 # 8. Add a new attribute to the my_dream_car dictionary called "miles". Assign it a float value that makes sense.
-#    Then, remove the key "brand" from the dictionary.
+#    Then, remove the key "mpg" from the dictionary. Print out my_dream_car.
 
 my_dream_car["miles"] = 98454.1
-my_dream_car.pop("brand")
+my_dream_car.pop("mpg")
+print(my_dream_car)
 
 
 # 9. Given the following list of space shuttles:

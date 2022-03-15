@@ -2,46 +2,49 @@
 # BTECH #: 
 
 
-# 1. Create a new list called flags_of_the_world. Give this list strings of at least five countries whose flags you like.
+# 1. Create a new list called world_flags. Give this list strings of at least five countries whose flags you like.
+#    Print out the type of world_flags to make sure it's a list.
 
 # Your code here
 
 
-# 2. Use indexing to access the second flag in your list flags_of_the_world. Remember that in Python, indexes
+# 2. Use indexing to access the second flag in your list world_flags. Remember that in Python, indexes
 #    start with 0, so the second item would be at index 1. Print out that flag.
 
 # Your code here
 
 
-# 3. Print out the length of your list flags_of_the_world using the len() function.
+# 3. Print out the length of your list world_flags using the len() function.
 
 # Your code here
 
 
-# 4. Add "Mars" to the flags_of_the_world list using the .append() method.
+# 4. Add "Mars" to the world_flags list using the .append() method. Print out world_flags to make sure
+#    Mars was added correctly.
 
 # Your code here
 
 
-# 5. Print out the flags_of_the_world list. Then, use the .sort() method on the list and print it again.
+# 5. Use the .sort() method on the list and print it out. Notice that the list is now sorted alphabetically!
 
 # Your code here
 
 
 # 6. Create a new dictionary called my_dream_car. Make up attributes for the car as keys in the dictionary, and give
-#    them appropriate values. You must at least give my_dream_car a name (string), year (integer), mpg (float),
-#    brand (string), and a list of places the car has been to (list of strings).
+#    them appropriate values. You must at least give my_dream_car a make (string), year (integer), mpg (float),
+#    model (string), and a list of places you want to take the car (list of strings).
 
 # Your code here
 
 
-# 7. Print out the name and the year of my_dream_car by accessing the keys of the dictionary.
+# 7. Print out the year, make, and model of my_dream_car by accessing the keys of the dictionary in a single
+#    print statement. Then print out the first location of the list of places you want to take the car.
 
 # Your code here
 
 
 # 8. Add a new attribute to the my_dream_car dictionary called "miles". Assign it a float value that makes sense.
-#    Then, remove the key "brand" from the dictionary.
+#    Then, remove the key "mpg" from the dictionary. Print out my_dream_car.
 
 # Your code here
 
@@ -92,7 +95,7 @@ numbers = [5,5,8,2,9,1,100,34,2,6,7,7,7,3,1,6,60,76,7,2,9,85,3,8,5,23,0,3,69,35,
 #    d. Print out the final dictionary to see what you ended up with.
 
 backpack = {
-    "carKeys": True,
+    "car_keys": True,
     "money": 4.18,
     "diapers": 3,
     "snacks": ["Goldfish", "Skittles", "Bottled Water"]
