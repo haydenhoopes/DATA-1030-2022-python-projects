@@ -25,6 +25,11 @@ space_shuttles = [
 #      Remember that mean can be computed as sum / length of list (number of observations)
 #   b. Get the median value. Remember that median is the middle value of the list, computed as
 #      the nth value in the list where n is len() // 2 (integer division).
+#      Hint: The length of the list is 37. That means that if you divide by 2 (to get the position of the middle number),
+#      you will get 18.5. Unfortunately, you can't use a decimal number as an index! Furthermore, the
+#      number 19 will actually return the number in position 18 (since the first item is 0, then 1, etc.).
+#      By using floor division (//) we can automatically get 18.5 and round it down, getting the correct index
+#      for item 17 (the middle number).
 #   c. Print out the mean and median. (The mean is 21, the median is 7)
 
 numbers = [5,5,8,2,9,1,100,34,2,6,7,7,7,3,1,6,60,76,7,2,9,85,3,8,5,23,0,3,69,35,50,3,3,86,1,1,45]
