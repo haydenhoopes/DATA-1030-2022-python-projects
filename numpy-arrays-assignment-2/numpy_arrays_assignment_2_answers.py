@@ -1,43 +1,103 @@
 # Name:
 # BTECH #:
 
+# You should import the NumPy library here
 import numpy as np
 
-# *********  QUESTION 1  *********
-# Using indexing, create the following matrix:
-# Matrix 1
-# [  0  0  1]
-# [  0  9  1]
-# [  0  0  1]
+# Use the following 1-dimensional NumPy array to answer the questions below:
 
-def createMatrix1():
-    m = np.zeros(shape=(3, 3))
-    m[:, 2] = 1
-    m[1, 1] = 9
-    return m
+number_matrix = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+
+
+# *********  QUESTION 1  *********
+# Use indexing to get the number '8' out of the `number_matrix`. Print it out.
+
+print(number_matrix[7])
 
 
 # *********  QUESTION 2  *********
-# Using indexing, create the following matrix:
-# Matrix 2
+# Use indexing and slicing to print out numbers 3 through 6 from the `number_matrix`.
+
+print(number_matrix[2:5])
+
+
+# *********  QUESTION 3  *********
+# Use indexing and slicing to print out the even numbers from the `number_matrix`.
+
+print(number_matrix[1::2])
+
+
+# Use the following 2-dimensional NumPy array to answer the questions below:
+
+letter_matrix = np.array([
+    ['a', 'b', 'c', 'd', 'e'], 
+    ['f', 'g', 'h', 'i', 'j'], 
+    ['k', 'l', 'm', 'n', 'o'], 
+    ['p', 'q', 'r', 's', 't'], 
+    ['u', 'v', 'w', 'x', 'y']])
+
+# *********  QUESTION 4  *********
+# Use indexing to print the letter 'q' out of the `letter_matrix`.
+
+print(letter_matrix[3, 1])
+
+
+# *********  QUESTION 5  *********
+# Use indexing and slicing to print out the entire second-to-last row of the `letter_matrix`.
+
+print(letter_matrix[3,:])
+
+
+# *********  QUESTION 6  *********
+# Use indexing and slicing to print out the entire second and fourth columns of the `letter_matrix`. This should
+# return a new matrix (ie. 2-dimensional array).
+
+print(letter_matrix[:, 1:4:2])
+
+
+# *********  QUESTION 7  *********
+# Use indexing to print out all of the vowels in the `letter_matrix`. You can use multiple print statements.
+
+print(letter_matrix[0, 0]) # a
+print(letter_matrix[0, 4]) # e
+print(letter_matrix[1, 3]) # i
+print(letter_matrix[2, 4]) # o
+print(letter_matrix[4, 0]) # u
+
+
+
+# *********  QUESTION 8  *********
+# Using indexing, modify `matrix_1` to look like the following matrix. Print it out when you are done.
+# [  0  0  1 ]
+# [  0  9  1 ]
+# [  0  0  1 ]
+
+matrix_1 = np.zeros((3, 3))
+
+matrix_1[:, 2] = 1
+matrix_1[1, 1] = 9
+print(matrix_1)
+
+
+# *********  QUESTION 9  *********
+# Using indexing, modify `matrix_2` to look like the following matrix. Print it out when you are done.
 # [  0  0  0  7  0]
 # [  1  1  1  1  1]
 # [  3  4  5  4  3]
 # [  1  1  1  1  1]
 # [  7  0  0  0  0]
 
-def createMatrix2():
-    m = np.zeros(shape=(5,5))
-    m[1::2, :] = 1
-    m[0, 3] = 7
-    m[4, 0] = 7
-    m[2, :] = [3, 4, 5, 4, 3]
-    return m
+matrix_2 = np.zeros((5, 5))
 
+matrix_2[1::2, :] = 1
+matrix_2[0, 3] = 7
+matrix_2[4, 0] = 7
+matrix_2[2, :] = [3, 4, 5, 4, 3]
+print(matrix_2)
+   
 
-# *********  QUESTION 3  *********
-# Using indexing and array methods, create the following matrix:
-# Matrix 3
+# *********  QUESTION 10  *********
+# Using indexing, modify `matrix_3` to look like the following matrix. Print it out when you are done.
 # [  1  0  3  0  3  0  0]
 # [  0  1  0  2  2  2  0]
 # [  4  4  1  4  4  4  4]
@@ -46,15 +106,13 @@ def createMatrix2():
 # [  9  9  9  0 10  1  0]
 # [  9  9  9  0  0  0  1]
 
-def createMatrix3():
-    m = np.eye(7)
-    m[2, :] = 4
-    m[2, 2] = 1
-    n = np.full((3, 3), 9)
-    m[4:, :3] = n.copy()
-    m[1, 3:6] = 2
-    m[5, 4] = 10
-    m[0, 2] = 3
-    m[0, 4] = 3
-    return m
+matrix_3 = np.zeros((7, 7))
 
+matrix_3[2, :] = 4
+matrix_3[2, 2] = 1
+matrix_3[4:, :3] = 9
+matrix_3[1, 3:6] = 2
+matrix_3[5, 4] = 10
+matrix_3[0, 2] = 3
+matrix_3[0, 4] = 3
+print(matrix_3)

@@ -92,7 +92,7 @@ print(fives)
 # The formula for converting a temperature from Celsius to Fahrenheit is `temperature * 9/5 + 32`.
 
 # Call the functions once after you create them. You can use this list of temperatures to test. Note that in 
-# Fahrenheit, the -40C = -40F, 0C = 32F, and 100C = 212F.
+# Fahrenheit, -40C = -40F, 0C = 32F, and 100C = 212F.
 temperaturesInCelsius = [-40, 0, 100]
 
 # This function uses loops to convert a list of temperatures in Celsius to temperatures in Fahrenheit

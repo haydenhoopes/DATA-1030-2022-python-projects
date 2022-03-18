@@ -1,36 +1,111 @@
 # Name:
 # BTECH #:
 
-# Import numpy
+# Import the NumPy library here
 import numpy as np
 
-# Get three pseudo-random sets of integers between -100 and 100
-# np.random.seed(1) # UNCOMMENT ME
-# array = np.random.randint(-100, 101, 100) # UNCOMMENT ME: You can use this array to test your functions
+
+# Use the array below in the following questions.
+numbers = np.array([12, 9, 15, 16, 11, 6, 11, 9, 2, 9, 10, 16, 19, 1, 8, 10, 13, 4, 11, 5])
 
 
 # ********  QUESTION 1  ********
-# Build a function that takes in an array and two integers and returns an array of items greater than the first number and less than the second number?
-def getNumbersBetween(array, lowerNumber, higherNumber):
-    return array[ (array > lowerNumber) & (array < higherNumber) ]
+# Use the `where()` function to get an array of indexes that correspond to the location of each number 11 in the
+# `numbers` array. Print out this array.
 
+print(np.where(numbers == 11))
 
 
 # ********  QUESTION 2  ********
-# Build a function that takes in an array of integers and returns all of the negative numbers EXCEPT for -57
-def negativeNumbersExceptNegative57(array):
-    return array[ (array < 0) & (array != -57) ]
+# Use the `where()` function to get an array of indexes that correspond to the locations of numbers less than 6.
 
+print(np.where(numbers < 6))
 
 
 # ********  QUESTION 3  ********
-# Write a function that takes an array and a number, and retrieves an array of each number immediately to the left and right of that number. 
-# The order of the values is not important. Remember that you can join two arrays together using the NumPy
-# concatenate function, where the first argument is a tuple that contains each array to be merged.
-# np.concatenate((arr1, arr2))
-def leftAndRight(array, num):
-    indexes = np.where(array == num)[0]
-    leftIndexes = indexes - 1
-    rightIndexes = indexes + 1
-    
-    return np.concatenate((array[ rightIndexes ], array[ leftIndexes ]))
+# Use the `where()` function to get an array of indexes that correspond to the locations of numbers greater than 15.
+
+print(np.where(numbers > 15))
+
+
+# ********  QUESTION 4  ********
+# Use the `where()` function to get an array of indexes that correspond to the locations of numbers evenly divisible
+# by 3.
+
+print(np.where(numbers % 3 == 0))
+
+
+# ********  QUESTION 5  ********
+# Notice that in each of the arrays printed above, the numbers printed do not all correspond to the condition (ie.
+# getting numbers equal to 11 returns 4, which is not equal to 11). Why did this happen?
+
+''' Your answer here. '''
+
+
+# ********  QUESTION 6  ********
+# Pass a `where()` function into the `numbers` array inside square brackets to filter it down to values evenly divisible
+# by 3. Print out the filtered array.
+
+filtered_array = numbers[ np.where(numbers % 3 == 0) ]
+print(filtered_array)
+
+
+# ********  QUESTION 7  ********
+# Get a filtered version of the array `numbers` WITHOUT passing in the `where()` function. Instead, pass in a simple
+# comparison in the format array[ array == # ]. Filter to numbers evenly divisible by 4.
+
+print(numbers[ numbers % 4 == 0])
+
+
+# ********  QUESTION 8  ********
+# Get a filtered array of `numbers` greater than 5 and less than 11. Print out the array.
+
+print(numbers[ (numbers > 5) & (numbers < 11) ])
+
+
+# ********  QUESTION 9  ********
+# Get a filtered array of `numbers` less than 5 or greater than 11. Print out the array.
+
+print(numbers[ (numbers < 5) | (numbers > 11) ])
+
+
+# ********  QUESTION 10  ********
+# Get a filtered array of `numbers` either not divisible by 3 or are greater than 14.
+
+print(numbers[ ~(numbers % 3 == 0) | (numbers > 14) ])
+
+
+# Use the following 2-dimensional array to answer the questions below.
+numbers_2D = [[16, 16,  6,  1,  4],
+              [15, 10,  7, 15, 14],
+              [ 5, 15,  7,  6, 17],
+              [ 8,  4,  2,  2,  2],
+              [ 3, 15,  4, 12,  1]]
+
+
+# ********  QUESTION 11  ********
+# Create a filter that looks for items in the `numbers_2D` array greater than 10 and save it to a variable.
+# It should look something like `filt = a > #`. Print out the filt variable.
+
+filt = numbers_2D > 10
+print(filt)
+
+
+# ********  QUESTION 12  ********
+# What did the `filt` variable created previously look like? What data types did it have?
+
+''' Your answer here. '''
+
+
+# ********  QUESTION 13  ********
+# Use the `filt` variable as the filter to get an array of numbers from the `numbers_2D` array greater than 10. In
+# other words, pass in the variable `filt` to the square brackets instead of typing the filter out `array[ filt ]`.
+# Don't worry, working with 2-dimensional arrays is just as easy as working with 1-dimensional arrays!
+
+print(numbers_2D[ filt ])
+
+
+# ********  QUESTION 14  ********
+# What kind of array got printed out in the previous question (1-dimensional or 2-dimensional)?
+
+''' Your answer here. '''
