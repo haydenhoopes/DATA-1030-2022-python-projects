@@ -9,39 +9,22 @@
 #    each time.
 
 number_1 = 3
-if number_1 % 2 == 1:
-    print("It is odd")
-else:
-    print("It is even")
+# Your code here
 
 
 number_2 = 4
-if number_2 % 2 == 1:
-    print("It is odd")
-else:
-    print("It is even")
+# Your code here
 
 
 number_3 = 55564673
-if number_3 % 2 == 1:
-    print("It is odd")
-else:
-    print("It is even")
+# Your code here
 
 
 # 2. Turn the if statements you made above into a function that takes a single integer as a parameter. The
 #    function should pass the integer into the if statement, which determines if it is even or odd. Call the function
 #    three times with different numbers.
 
-def even_or_odd(number):
-    if number % 2 == 1:
-        print("It is odd")
-    else:
-        print("It is even")
-
-even_or_odd(54)
-even_or_odd(55)
-even_or_odd(56)
+# Your code here
 
 
 # 3. Use if statements to determine if the following numbers are greater than, less than, or equal to 0. Use
@@ -50,47 +33,22 @@ even_or_odd(56)
 #    Otherwise, print out "Equal to 0". Use the same if statement each time.
 
 number_1 = 365
-if number_1 > 0:
-    print("Greater than 0")
-elif number_1 < 0:
-    print("Less than 0")
-else:
-    print("Equals 0")
+# Your code here
 
 
 number_2 = -50
-if number_2 > 0:
-    print("Greater than 0")
-elif number_2 < 0:
-    print("Less than 0")
-else:
-    print("Equals 0")
+# Your code here
 
 
 number_3 = 0
-if number_3 > 0:
-    print("Greater than 0")
-elif number_3 < 0:
-    print("Less than 0")
-else:
-    print("Equals 0")
+# Your code here
 
 
 # 4. Turn the if statements you just made into a single function that takes an integer as a parameter. The function
 #    should pass the integer into the if statement, which determines if it is greater than, less than, or equal
 #    to 0. Call the function three times.
 
-def lessThanOrEqualToZero(number):
-    if number > 0:
-        print("Greater than 0")
-    elif number < 0:
-        print("Less than 0")
-    else:
-        print("Equals 0")
-
-lessThanOrEqualToZero(-1)
-lessThanOrEqualToZero(0)
-lessThanOrEqualToZero(1)
+# Your code here
 
 
 # 5. According to the Chinese zodiac calendar, each year is attributed to a certain animal. The order of the
@@ -115,98 +73,53 @@ lessThanOrEqualToZero(1)
 
 year = 2022
 
-if (year-1900) % 12 == 0:
-    print("Rat")
-elif (year-1900) % 12 == 1:
-    print("Ox")
-elif (year-1900) % 12 == 2:
-    print("Tiger")
-elif (year-1900) % 12 == 3:
-    print("Rabbit")
-elif (year-1900) % 12 == 4:
-    print("Dragon")
-elif (year-1900) % 12 == 5:
-    print("Snake")
-elif (year-1900) % 12 == 6:
-    print("Horse")
-elif (year-1900) % 12 == 7:
-    print("Sheep")
-elif (year-1900) % 12 == 8:
-    print("Monkey")
-elif (year-1900) % 12 == 9:
-    print("Rooster")
-elif (year-1900) % 12 == 10:
-    print("Dog")
-else:
-    print("Pig")
+# Your code here
 
 
-# 6. Create if statements that test the following conditions on the variable `number`. Use the key words and/or and 
+# 6. Create if statements that test the following conditions on the numbers 3.14 and 100. Use the key words and/or and 
 #    comparison operators (>, >=, ==, !=, <, <=) appropriately.
-#    a. If `number` is greater than 0 and `number` is less than 200, print out "It's between 0 and 200".
-#    b. If `number` is less than -60 or greater than 0, print out "It's either less than -60 or greater than 0".
-#    c. If `number` is less than -1 and greater than 1, print out "It's less than negative 1 and greater than 1."
-#    d. You shouldn't get any output with question 6c. Why do you think this happened?
-
-number = 100
+#    a. If 3.14 is greater than 0 and 3.14 is less than 10, print out "It's between 0 and 10".
+#    b. If 100 is less than -60 or greater than 0, print out "It's either less than -60 or greater than 0".
+#    c. If (100 is greater than 10 and 3.14 is less than 50) and 100 does not equal 73, print out "I think I'm doing something right".
 
 #    a.
-if number > 0 and number < 10:
-    print("It's between 0 and 10")
+# Your code here
 
 #    b.
-if number < -60 or number > 0:
-    print("It's either less than -60 or greater than 0")
+# Your code here
 
 #    c.
-if number < -1 and number > 1:
-    print("It's less than negative 1 and greater than 1.")
-
-#    d. There was no output because of the key word `and`. A number cannot be both less than -1 and greater than 1.
+# Your code here
 
 
 # 7. Use a for loop to print out each letter in the following phrase:
 phrase = "Yankee doodle came to town"
 
-for letter in phrase:
-    print(letter)
+# Your code here
 
 
 # 8. Create a list of integers that represent ages of people in your family (you can make it up). Give the list at least 3 integers. 
 #    Use a for-loop to print out each person's age one year from now (print the age plus 1).
 
-ages = [24, 23, 53, 21]
-for age in ages:
-    print(age + 1)
+# Your code here
 
 
 # 9. Use a for-loop and the range() function to print out all numbers between 5 and 10. Make sure that 10 is printed as well! You may need to use 11
 #    as then end parameter in the range function since it is not inclusive (doesn't include last number).
 
-for number in range(5,11):
-    print(number)
+# Your code here
 
 
 # 10. Use a for loop in combination with the range() function to add together all numbers (5 points)
-# between 1 and 100 evenly divisible by 7. You can tell if a number is evenly divisible by 7 if 
-# the number % 7 == 0. Print out the resulting total.
+# between 1 and 100 divisible by 7. Print out the resulting total.
 
-total = 0
-for i in range(1,100):
-    if i % 7 == 0:
-        total += i
-print(total)
+# Your code here
 
 
 # 11. Create a variable called total and set it equal to 0. Then, use a while loop to add 5 to the total until the total is
-#     greater than 100. The while loop should keep running as long as the total number is less than or equal to 100. Print 
-#     out the total when you finish.
+#    greater than 100. Print out the total when you finish.
 
-total = 0
-while total <= 100:
-    total += 6
-
-print(total)
+# Your code here
 
 
 # 12. Guess the number game! (10 points)
@@ -223,13 +136,4 @@ from random import random
 
 computer_choice = int(random() * 10) + 1 # This assigns a random value between 1 and 10 to computer_choice
 
-playing = True # while playing is True, keep playing the game. When the user guesses correctly, this should become False
-
-while playing:
-    user_choice = int(input("Guess a number between 1 and 10: "))
-    if user_choice == computer_choice:
-        playing = False
-        print("You win!")
-    else:
-        print("That's not it.")
-        
+# Your code here
