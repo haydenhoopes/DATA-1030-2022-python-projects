@@ -1,153 +1,109 @@
-### WAR
 # Name: 
 # BTECH #:
 
-# In this project, you will create the game "War" in which the user plays against the computer to win battles. 
-# Winning a battle involves playing a higher card than the other person, with the Ace being the high card. 
-# Cards cannot be reused and the player who wins the most battles when the cards run out is the winner.
+# 1. Create a list of your top 5 favorite meals. Call this list 'fav_meals'. Print the third meal on the list.
 
-# Note that in this version of "War", there is only one suit and thus, only one of each card.
-# 5 is a 5 value, and 11 is a Jack, 12 is a Queen, and 13 is a King. The number 14 is an Ace, which is the 
-# highest value card.
+# Your code here
+
+
+# 2. Add the meal "poppyseed chicken" to your list, now print the list to make sure this was added properly.
+
+# Your code here
+
+
+# 3. Create a dictionary called kitchen.  In this dictionary, you will have the following sets of keys and values
+    # pantry will include peanut butter, syrup, crackers, and alfredo
+    # fridge will include milk, eggs, butter, and shredded cheese
+    # meals will be your fav_meals list
+    # grocery_list will be a list of items you need to make poppy seed chicken
+        # This will include chicken breasts, poppy seeds, sour cream, and cream of chicken soup
+    # trips will be a number representing the number of trips you take to go to the grocery store. Set this as 0.
+  # print out your dictionary to make sure that your fav_meal list shows all the items created in Question 1 and 2.
+
+# Your code here
+
+
+# 4. Now you go shopping. You were able to find poppy seeds and sour cream, but you weren't able to find the other 
+#    items on your list
+    # Update your kitchen dictionary
+        # Add poppy seeds to your pantry
+        # Add sour cream to your fridge
+        # Take both of these items off your grocery_list
+        # Update your number of trips
+    # Print your dictionary to make sure these updates were incorporated properly
+
+# Your code here
+
+
+# 5. You find a grocery store that has the rest of the items on your grocery list
+    # Update your kitchen dictionary
+        # Add cream of chicken soup to your pantry
+        # Add chicken breast to your fridge
+        # Take both of these items off your grocery_list
+        # Update your number of trips
+    # Print your dictionary to make sure these updates were incorporated properly
+
+# Your code here
+
+
+# 6. The student now becomes the teacher!
+    # Create a variable called score. We are going to start by assigning this variable the value of 87 (out of 100)
+    # Create an if-elif-else statement that will print what the student grade is based on the score variable
+        # Scores that are 90 or higher should return the statement 'You got an A'
+        # Scores that are 80 to 90 (not including 90 itself) should return 'You got a B'
+        # Scores that are 70 to 80 (not including 80 itself) should return 'You got a C'
+        # Scores that are 60 to 70 (not including 70 itself) should return 'You got a D'
+        # Scores that are less than 60 should return 'You failed'
+    # Run this code and the score of 87 should print the statement 'You got a B'.
+
+# Your code here
+
+
+# 7. Expand on your code from Question 6. Now you are going to write a function named grade.
+    # The grade function takes one parameter called 'sscore' short for student score.
+    # You should be able to copy your code from question 5 into the function and change 'score' to 'sscore'
+    # After you have created your function, test this function using the code grade(75.5)
+
+# Your code here
+
+
+# 8. Below, I have provided a list that shows the number of stock shares owned by 15 stock shareholders. 
+    # The company has grown so much that the shares have split. 
+    # Everyone that currently owns stock gets to double their number of shares
+        # Use a for loop to multiply all the number of stock by 2
+            # Create a new empty list called double_list
+            # Start a for loop that iterates through all the items of stock_list
+            # Inside the for loop, create a new variable called double_value and set this equal to the iterated value multiplied by 2
+            # Add double_value to double_list
+            # After you have fun your for loop, print double_list to make sure that each value from stock_list has been doubled
+
+stock_list = [10, 20, 300, 75, 3, 15, 26, 5000, 46, 13, 22, 100, 30, 44, 1000]
+
+# Your code here
+
+
+# 9. You want to build a game that finds how long it takes for you to collect all of the face cards in a deck of cards. 
+    # For our purposes, we will use only one suit of cards numbered 2-14 where 11 = "Jack", 12 = "Queen", 13 = "King", and 14 = "Ace"
+    # If you are to pick up cards one at a time from your deck, we want to know how many cards you need to pick before you have all the face cards
+    # Below, we have included code that generates a randomized list of the deck of cards 2-14.
 
 import random
+possibilities = [x for x in range(2,15)]
+random.shuffle(possibilities)
 
-from matplotlib.style import use # To distribute the cards randomly, we will import the random module.
-deckOfCards = [i for i in range(5,15)] # Create the deck of cards, which is really just a list of numbers 2-14
-random.shuffle(deckOfCards) # Mix up the order of the deckOfCards using the shuffle method 
-
-
-# Question 1: Create `user` dictionary and print it out. The dictionary will have three keys:
-#   - name: a single string of your name
-#   - winCount: starts as an integer 0
-#   - cardList: a list derived as a subset of the `deckOfCards` list. Since there are 10 cards total (and they
-#     are already shuffled), give yourself the first 5 cards in deckOfCards. The first 5 cards can be accessed
-#     using the code `deckOfCards[0:5]`.
-#       • Print out the dictionary `user` to make sure this was created properly.
+        # Create an empty list called cards_picked
+        # Start a while loop that runs as long as the length of cards_picked is less than 13
+        # Add the first card that appears in possibilities to cards_picked
+        # Now remove the first card from possibilities
+        # Outside of your while loop, print(cards_picked)
+            # Test your code. You should see a randomized list of the cards 2-14
 
 # Your code here
 
 
-# Question 2: Create `computer` dictionary and print it out. The dictionary will have the same three keys as
-# before:
-#   - name: a single string of the computer's name
-#   - cardList: a list derived as a subset of the `deckOfCards` list. Since there are 10 cards total (and they
-#     are already shuffled), give the computer the last 5 cards in deckOfCards. The last 5 cards can be accessed
-#     using the code `deckOfCards[5:10]`.
-#       • Print out the dictionary `computer` to make sure it was created properly.
-#       • Print `deckOfCards` and check that the user `cardList` contains the first five cards and the computer 
-#         `cardList` contains the last 5 cards. Note that these cards will change each time the code is run so 
-#         this isn't considered cheating to look at the cards at this stage.
+# 10. Add to your while loop in Question 9. 
+    # Add an if statement after you remove the first card from possibilities
+    # The if statement should instruct the code to break if cards 11 and 12 and 13 and 14 are in your hand (cards_picked)
+    # Change the print statement outside of the for loop to print "Number of picks: #" where number represents the number of cards in your hand.
+ 
 
-# Your code here
-
-
-# Question 3: Create a while loop that will run as long as the number of cards in the user's card list is greater 
-# than 4. We will eventually change this statement, but for now, we just want to see the while loop run once as 
-# we "remove a card" from the player's hand. If you run your code before finishing Question 3, you risk creating
-# an infinite loop that may not ever stop. If this does happen to you, click the Command Prompt and then Ctrl+C
-# until the program terminates.
-#   - Inside the loop, print out the user's `cardList`. This will show the user what cards are in their hand.
-#   - Create a variable called `userCard`. This variable will require user input. Ask the user, "Which card do
-#     you want to play?". Remember that this input must be converted to an integer.
-#   - Remove the `userCard` from the user's `cardList` using the `.remove()` method.
-#   - Print the user's `cardList`
-#       • Run the code and make sure that you see the list of cards in your hand and are asked which card you want
-#         to play. After inputting a value from the lsit of 5 cards, you will see the list of cards with the
-#         card that the user chose removed. Finally, because the length of the list is no longer greater than 4, 
-#         the while loop will end.
-
-# Your code here
-
-
-# Question 4: Eventually, we will want to take out our print statements since we will know our code is running
-# properly. But we will want to add useful notes when the print statements are gone.
-#   - Add a statement in your while loop that prints "You chose #." where # represents the number the user chose 
-#     to play ('userCard')
-#       • Run your code again and make sure this this outputs correctly. Note that you may need to convert the
-#         user's card to a string.
-#       • Don't forget that code inside the while loop is indented. Even though it may be separated by comments
-#         that are not indented, the code still needs to be indented properly (comments are completely ignored).
-
-    # Your code here
-
-
-# Question 5: Now you will add the computer's choice.
-#   - Print the computer `cardList`.
-#   - Create a new variable called 'computerCard'.  This variable will select the first card in the computer's 
-#     'cardList' (since these cards were previously randomized). The index starts at 0.
-#   - Remove the card `computerCard` from the computer `cardList`.
-#   - Print the `computerCard`.
-#   - Print the computer `cardList`.
-#       • Run your code again and make sure you see the computer's original hand of cards, the card chosen, 
-#         and the hand of cards now that this 'ComputerCard' has been played. 
-    
-    # Your code here
-
-
-# Question 6: Before we drop most of these print statements, let's add a note of what card the computer played.
-#   - Add a statement in your while loop that prints "Name of computer chose #" that shows which card the computer
-#     chose. You may need to convert `computerCard` to a string before printing.
-#       • Run your code again and make sure that everything prints out correctly.
-
-    # Your code here
-
-
-# Question 7: We now need to limit what gets printed to the console. In the actual game of War, the user shouldn't
-# be able to see which cards the computer has and is going to play.
-#   - Comment out all print statements EXCEPT for the user's `cardList`, the statement `You chose the number + #`,
-#     and the statement `The computer chose the number #`.
-#       • Run your code again. This time, you should only see your hand, be asked to select a card from your hand,
-#         see the statement `You chose the number #`, and see the statement `The computer chose the number #`.
-
-# No code necessary here
-
-
-# Question 8: Now it's time to see who wins the battle for the first iteration of the while loop. Whoever played
-# the highest card wins the battle.
-#   - Compare the user card and the computer card in an if statement. If your card is higher than the computer's
-#     card, print out "You won the battle!". Otherwise, print out "You lost the battle".
-#       • Run your code and you should see either "You won the battle!" or "You lost the battle" as a final print
-#         statement. Make sure the comparison worked properly (ie. 13 actually did beat 7, etc.)
-
-    # Your code here
-
-
-# Question 9: Make sure that the battle wins get added to the win count in either the user or the computer's
-# dictionary.
-#   - Add a line to your if statement that if you win the battle, 1 gets added to the user dictionary `winCount` 
-#     and is reassigned. If the computer wins, 1 gets added to their `winCount` and is reassigned.
-#   - Print the user's `winCount` and the computer's `winCount` after the if statement.
-#       • Run the code and make sure that the winner of the battle shows 1 as their win count and the loser shows
-#         0 as their win count.
-
-# Modify code from Question 8. Then, add your code here.
-
-    # Your code here
-
-
-# Question 10: Now we will remove the limiting condition of the while loop to play battles until no cards are left.
-#   - Change the condition in the while loop (first line) to run while the length of the user's `cardList` is 
-#     greater than 0. This means that while cards are still left, the loop will keep running.
-#   - There are five cards in each hand. Thus, five "battles" should be played.
-#       • Run the code and this time you should be asked what card you want to play 5 different times. Make sure
-#         that the win counts are added up properly.
-
-# No code necessary here. Modify code from Questions 2 and 3.
-
-
-# Question 11: Now that we know the code is working, let's not worry about seeing the count of wins each round (we
-# just want to see the total at the end). Comment out the print statement from Question 10 that prints out the
-# number of wins each player has.
-
-# No code necessary here. Modify code from Question 10.
-
-
-# Question 12: The while loop is now completed. Now you can run through the entire game and determine a winner and
-# a loser.
-#   - After the while loop (not indented), write an if statement that compares the user's `winCount` to the 
-#     computer's `winCount`. If the user's `winCount` is greater, print "(Name of user) wins!". Otherwise, print
-#     "(Name of computer) wins." where (Name of user/computer) represents the name given in their dictionary.
-#       • Run the code to make sure you can play the game and declare a proper winner.
-
-# Your code here

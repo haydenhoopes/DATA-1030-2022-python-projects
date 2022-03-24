@@ -77,7 +77,7 @@ space_shuttles = [
 #       you will get 18.5. Unfortunately, you can't use a decimal number as an index! Furthermore, the
 #       number 19 will actually return the number in position 18 (since the first item is 0, then 1, etc.).
 #       By using floor division (//) we can automatically get 18.5 and round it down, getting the correct index
-#       for item 17 (the middle number).
+#       for item 19 (the middle number).
 #    c. Print out the mean and median. (The mean is 21, the median is 7)
 
 numbers = [5,5,8,2,9,1,100,34,2,6,7,7,7,3,1,6,60,76,7,2,9,85,3,8,5,23,0,3,69,35,50,3,3,86,1,1,45]

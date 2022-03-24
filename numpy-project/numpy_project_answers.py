@@ -15,6 +15,7 @@ import numpy as np
 # Import sudoku utilities (for formatting and creating new Sudokus)
 from sudoku_utils import board_print
 
+# This is an example sudoku puzzle. Use it for reference and testing.
 sudoku = np.array([
     [ 0, 0, 0, 0, 0, 0, 5, 7, 3],
     [ 8, 0, 0, 0, 2, 0, 0, 0, 0],
@@ -27,50 +28,67 @@ sudoku = np.array([
     [ 0, 0, 0, 0, 0, 0, 0, 4, 0]
 ])
 
+# board_print(sudoku) # Uncomment this to see a formatted print out of the puzzle
+
 
 def solveSudoku(grid):
-    # 1. Make a copy of the sudoku matrix
-    s = grid.copy()
-
-    # if value is 0 or list, then run the algorithm
-    stillGoing = True
-    while stillGoing:
+    still_going = True
+    while still_going:
         changes = 0
         for row in range(9):
             for col in range(9):
-                if s[row, col] == 0:
-                    potentialValues = getSpotValues(s, row, col)
+                if grid[row,col] == 0:
+                    potentialValues = getSpotValues(grid, row, col)
                     if len(potentialValues) == 1:
-                        s[row, col] = potentialValues[0]
+                        grid[row, col] = potentialValues[0]
                         changes += 1
-        
         if changes == 0:
-            stillGoing = False
-    return s
+            still_going = False
+    board_print(grid)
+    return grid
 
 
 def getValuesInRow(grid, row):
-    return [i for i in grid[row,:] if i != 0]
+    values_in_row = []
+    for number in grid[row,:]:
+        if number != 0:
+            values_in_row.append(number)
+    return values_in_row
 
 
 def getValuesInColumn(grid, col):
-    return [i for i in grid[:,col] if i != 0]
+    values_in_column = []
+    for number in grid[:,col]:
+        if number != 0:
+            values_in_column.append(number)
+    return values_in_column
 
 
 def getValuesInBox(grid, row, col):
-    topBound = (row // 3) * 3
-    bottomBound = topBound + 3
-    leftBound = (col // 3) * 3
-    rightBound = leftBound + 3
-    g = grid[topBound:bottomBound, leftBound:rightBound].flatten()
+    top_bound = (row // 3) * 3
+    bottom_bound = top_bound + 3
+    left_bound = (col // 3) * 3
+    right_bound = left_bound + 3
 
-    return [i for i in g if i != 0]
-
+    little_grid = grid[top_bound:bottom_bound, left_bound:right_bound]
+    values_in_box = []
+    for row in range(3):
+        for col in range(3):
+            if little_grid[row,col] != 0:
+                values_in_box.append(little_grid[row,col])
+    return values_in_box
 
 def getSpotValues(grid, row, col):
-    possibleValues = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    r = getValuesInRow(grid, row)
-    c = getValuesInColumn(grid, col)
-    b = getValuesInBox(grid, row, col)
-    return list(possibleValues - set(r + c + b))
+    values_in_row = getValuesInRow(grid, row)
+    values_in_column = getValuesInColumn(grid, col)
+    values_in_box = getValuesInBox(grid, row, col)
+
+    possibilities = []
+    for number in numbers:
+        if number not in values_in_row and number not in values_in_column and number not in values_in_box:
+            possibilities.append(number)
+    return possibilities
+
+solveSudoku(sudoku)

@@ -187,7 +187,7 @@ for number in range(5,11):
     print(number)
 
 
-# 10. Use a for loop in combination with the range() function to add together all numbers (5 points)
+# 10. Use a for loop in combination with the range() function to add together all numbers
 # between 1 and 100 evenly divisible by 7. You can tell if a number is evenly divisible by 7 if 
 # the number % 7 == 0. Print out the resulting total.
 
@@ -209,7 +209,7 @@ while total <= 100:
 print(total)
 
 
-# 12. Guess the number game! (10 points)
+# 12. Guess the number game!
 # Use the input() function to recieve input from the user on the console on each iteration of the while loop
 # to play a number guessing game. In this game, the while loop keeps the program
 # running until the user correctly guesses the number (between 1 and 10)

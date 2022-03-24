@@ -76,11 +76,14 @@ year = 2022
 # Your code here
 
 
-# 6. Create if statements that test the following conditions on the numbers 3.14 and 100. Use the key words and/or and 
+# 6. Create if statements that test the following conditions on the variable `number`. Use the key words and/or and 
 #    comparison operators (>, >=, ==, !=, <, <=) appropriately.
-#    a. If 3.14 is greater than 0 and 3.14 is less than 10, print out "It's between 0 and 10".
-#    b. If 100 is less than -60 or greater than 0, print out "It's either less than -60 or greater than 0".
-#    c. If (100 is greater than 10 and 3.14 is less than 50) and 100 does not equal 73, print out "I think I'm doing something right".
+#    a. If `number` is greater than 0 and `number` is less than 200, print out "It's between 0 and 200".
+#    b. If `number` is less than -60 or greater than 0, print out "It's either less than -60 or greater than 0".
+#    c. If `number` is less than -1 and greater than 1, print out "It's less than negative 1 and greater than 1."
+#    d. You shouldn't get any output with question 6c. Why do you think this happened?
+
+number = 100
 
 #    a.
 # Your code here
@@ -90,6 +93,8 @@ year = 2022
 
 #    c.
 # Your code here
+
+''' d. Your answer here '''
 
 
 # 7. Use a for loop to print out each letter in the following phrase:
@@ -110,19 +115,21 @@ phrase = "Yankee doodle came to town"
 # Your code here
 
 
-# 10. Use a for loop in combination with the range() function to add together all numbers (5 points)
-# between 1 and 100 divisible by 7. Print out the resulting total.
+# 10. Use a for loop in combination with the range() function to add together all numbers
+# between 1 and 100 evenly divisible by 7. You can tell if a number is evenly divisible by 7 if 
+# the number % 7 == 0. Print out the resulting total.
 
 # Your code here
 
 
 # 11. Create a variable called total and set it equal to 0. Then, use a while loop to add 5 to the total until the total is
-#    greater than 100. Print out the total when you finish.
+#     greater than 100. The while loop should keep running as long as the total number is less than or equal to 100. Print 
+#     out the total when you finish.
 
 # Your code here
 
 
-# 12. Guess the number game! (10 points)
+# 12. Guess the number game!
 # Use the input() function to recieve input from the user on the console on each iteration of the while loop
 # to play a number guessing game. In this game, the while loop keeps the program
 # running until the user correctly guesses the number (between 1 and 10)
@@ -137,3 +144,4 @@ from random import random
 computer_choice = int(random() * 10) + 1 # This assigns a random value between 1 and 10 to computer_choice
 
 # Your code here
+        

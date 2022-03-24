@@ -2,7 +2,7 @@
 # December 27, 2021
 
 import numpy as np
-from numpy_project import *
+from numpy_project_answers import *
 from sudoku_utils import board_print
 
 def createSudoku():

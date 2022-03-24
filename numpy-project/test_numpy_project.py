@@ -14,7 +14,8 @@ import random
 '''
 
 # Import the student's code
-from numpy_project import solveSudoku
+from numpy_project_answers import solveSudoku
+from create_sudoku import createSudoku
 
 
 class TestSudokuSolver(unittest.TestCase):
