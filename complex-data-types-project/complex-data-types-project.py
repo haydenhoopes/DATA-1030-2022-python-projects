@@ -23,13 +23,13 @@
 # Your code here
 
 
-# 4. Now you go shopping. You were able to find poppy seeds and sour cream, but you weren't able to find the other 
-#    items on your list
+# 4. Now you go shopping. You were able to find poppy seeds and sour cream, but you 
+#    weren't able to find the other items on your list
     # Update your kitchen dictionary
         # Add poppy seeds to your pantry
         # Add sour cream to your fridge
         # Take both of these items off your grocery_list
-        # Update your number of trips
+        # Update your number of trips using the addition assignment operator
     # Print your dictionary to make sure these updates were incorporated properly
 
 # Your code here
@@ -40,7 +40,7 @@
         # Add cream of chicken soup to your pantry
         # Add chicken breast to your fridge
         # Take both of these items off your grocery_list
-        # Update your number of trips
+        # Update your number of trips using the additiona assignment operator
     # Print your dictionary to make sure these updates were incorporated properly
 
 # Your code here

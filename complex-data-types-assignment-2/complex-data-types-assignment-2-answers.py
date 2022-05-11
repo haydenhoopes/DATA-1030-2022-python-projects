@@ -107,7 +107,7 @@ lessThanOrEqualToZero(1)
 #    - (1909) Rooster   9
 #    - (1910) Dog       10
 #    - (1911) Pig       11
-#    The zodiac sign for any given year can be calculated by subtracted 1900 from the year and then getting its
+#    The zodiac sign for any given year can be calculated by subtracting 1900 from the year and then getting its
 #    remainder when divided by 12. For example, the year 2022 would be the year of the tiger because
 #    2022 - 1900 = 122 and 122 % 12 = 2. The number 2 (as seen above) corresponds to the tiger.
 #    Create a long if-elif-else function that prints out the zodiac sign depending on the year given. Choose

@@ -31,14 +31,10 @@ sudoku = np.array([
 
 
 # ********  Function 1  ********
-# Each number in the Sudoku puzzle must be unique to its row. That means that the top left value in the
-# sudoku puzzle above cannot be 5, 7, or 3, which already exist in the row. In this step, we will create
-# a function that returns a list of numbers already used in a given row.
-
 # Create a function called `get_values_in_row()`. This function should accept (1) a 9x9 grid of numbers
 # (ie. the Sudoku puzzle) and (2) a row number. It should perform the following steps:
 #   1. Create an empty list called `values_in_row`.
-#   2. Use a for loop to iterate through each number in the row. `for number in grid[row: ]`.
+#   2. Use a for loop to iterate through each number in the row. `for number in grid[row,:]`.
 #   3. Inside the for loop, use an if statement to determine if each number is equal to 0 or not.
 #       - If the number is equal to 0, do nothing.
 #       - Else (if the number is not 0) add it to the list `values_in_row`.
@@ -48,19 +44,16 @@ def get_values_in_row(grid, row):
     # Your code here
     return
 
-# TRY IT OUT: Uncomment the code below to check your work on this function.
+# TRY IT OUT: Write code below this line to test out the `get_values_in_row()` function three times. Comment it 
+# out when you finish testing.
 # print(get_values_in_row(sudoku, 0)) # Get values in the top row (0). Should return [5, 7, 3]
 
 
 # ********  Function 2  ********
-# Each number in the Sudoku puzzle must be unique to its column. That means that the top left value in the
-# sudoku puzzle above cannot be 8, 7, 5, 2, or 9, which already exist in the column. In this step, we will 
-# create a function that returns a list of numbers already used in a given column.
-
 # Create a function called `get_values_in_column()`. This function should accept (1) a 9x9 grid of numbers
 # (ie. the Sudoku puzzle) and (2) a column number. It should perform the following steps:
 #   1. Create an empty list called `values_in_column`.
-#   2. Use a for loop to iterate through each number in the column. `for number in grid[ :column]`.
+#   2. Use a for loop to iterate through each number in the column. `for number in grid[:,column]`.
 #   3. Inside the for loop, use an if statement to determine if each number is equal to 0 or not.
 #       - If the number is equal to 0, do nothing.
 #       - Else (if the number is not 0) add it to the list `values_in_column`.
@@ -70,43 +63,12 @@ def get_values_in_column(grid, col):
     # Your code here
     return
 
-# TRY IT OUT: Uncomment the code below to check your work on this function.
+# TRY IT OUT: Write code below this line to test out the `get_values_in_column()` function three times. Comment it 
+# out when you finish testing.
 # print(get_values_in_column(sudoku, 0)) # Get values in the leftmost column (0). Should return [8, 7, 5, 2, 9]
 
 
 # ********  Function 3  ********
-# Each number in the Sudoku puzzle must be unique to its 3x3 box. That means that the top left value in the
-# sudoku puzzle above cannot be 8 or 7, which already exist in the box. In this step, we will create
-# a function that returns a list of numbers already taken in a given row.
-
-# When you look at the sudoku puzzle using the `board_print()` function, you will notice that the puzzle is
-# printed with nine squares, each of which has three rows and three columns. Each of the numbers in these boxes
-# is unique to the box. Thus, for every given number in the sudoku puzzle, we need to figure out which box it is
-# in, and which numbers are unique to that box. Finding the box is probably the hardest part of this assignment.
-
-# To collect the values in the box, we need to determine what the top, bottom, left, and right boundaries for each
-# box is given a particular position. The number in position [2, 2] (row three, column three), for example, has a
-# left border of 0 (column 0), right border of 2 (column 2), top border of 0 (row 0) and bottom border of 2 (row
-# 2). Using those borders to take slices of the sudoku puzzle would return the 3x3 box.
-
-# We can determine the borders given a row and column using floor division and multiplication. For example, given
-# a number in row 5 and column 7, we can determine it's borders using the following math:
-#   - left_border = 7 // 3 = 2 and 2 * 3 = 6. The left border is column 6.
-#   - right_border = left_border (6) + 2. The right border is column 8.
-#   - top_border = 5 // 3 = 1 and 1 * 3 = 3. The top border is row 3.
-#   - bottom_border = top_border (is 3) + 2. The bottom border is row 5.
-
-# We can then get a slice of the sudoku puzzle by simply passing in the borders, placing colons `:` between them.
-# Don't forget that the second value of a NumPy slice is not inclusive, so you have to add one (+1) to it!
-
-# We will then do exactly what we did before and create an empty list called `values_in_box`. Then, we loop
-# through the 3x3 slice of the sudoku puzzle and append non-zeroes to the list.
-
-# Note that the slice of the sudoku puzzle is a "list of lists". That means we have to use a nested for loop to
-# iterate through its values. To use a nested for loop, we build a for loop that iterates through numbers 0-2 and
-# and then build another for loop that iterates through numbers 0-2 inside. The first loop represents iterating
-# through each row, and the second loop represents iterating through each column in that row.
-
 # Create a function called `get_values_in_box()`. This function should accept (1) a 9x9 grid of numbers
 # (ie. the Sudoku puzzle), (2) a row number, and (3) a column number. The row number and column number indicate
 # the position of each value in the Sudoku puzzle. It should perform the following steps:
@@ -131,16 +93,12 @@ def get_values_in_box(grid, row, col):
     # Your code here
     return
 
-# TRY IT OUT: Uncomment the code below to check your work on this function.
+# TRY IT OUT: Write code below this line to test out the `get_values_in_box()` function three times. Comment it 
+# out when you finish testing.
 # print(get_values_in_box(sudoku, 0, 0)) # Get values in the top left box (position [0, 0]). Should return [8, 7]
 
 
 # ********  Function 4  ********
-# Now that we have functions to determine which values exist in each row, column, and box, we need to use them
-# to determine which values a particular 'spot' can take. Every number between 1 and 9 that was not returned
-# by either the `get_values_in_row()`, `get_values_in_column()`, or `get_values_in_box()` functions will be
-# returned by the `get_spot_values()` function in a list of possibilities.
-
 # Create a function called `get_spot_values()`. This function should accept (1) a 9x9 grid of numbers (ie.
 # the Sudoku puzzle), (2) a row number, and (3) a column number. The row number and column number indicate the
 # position of a single value in the Sudoku puzzle. This function should perform the following steps:
@@ -163,7 +121,8 @@ def get_spot_values(grid, row, col):
     # Your code here
     return
 
-# TRY IT OUT: Uncomment the code below to check your work on this function.
+# TRY IT OUT: Write code below this line to test out the `get_spot_values()` function three times. Comment it 
+# out when you finish testing.
 # print(get_spot_values(sudoku, 0, 0)) # Get potential values for the top-left number. Should return [1, 4, 6]
 
 

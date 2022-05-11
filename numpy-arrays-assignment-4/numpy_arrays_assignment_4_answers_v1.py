@@ -94,10 +94,10 @@ print(numbers.std())
 
 
 # ********  QUESTION 14  ********
-# One of the aggregate functions that we used as a NumPy function we did not use as an array method. This is because
-# it is not available as an array method. Which aggregate function was this?
+# Two of the aggregate functions that we used as NumPy functions were not used as array methods. This is because
+# they are not available as array methods. Which aggregate functions were they?
 
-''' Median is not an aggregate function that can be used as an array method. '''
+''' Median is not an aggregate function that can be used as an array method, and neither is quantile. '''
 
 
 

@@ -18,7 +18,7 @@ print(number_matrix[7])
 # *********  QUESTION 2  *********
 # Use indexing and slicing to print out numbers 3 through 6 from the `number_matrix`.
 
-print(number_matrix[2:5])
+print(number_matrix[2:6])
 
 
 # *********  QUESTION 3  *********

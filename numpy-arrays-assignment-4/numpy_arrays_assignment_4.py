@@ -101,8 +101,8 @@ numbers = np.array([12, 74, 53, 46, 15, 35, 36, 16, 37, 93, 87, 48, 6, 78, 16, 5
 
 
 # ********  QUESTION 15  ********
-# One of the aggregate functions that we used as a NumPy function we did not use as an array method. This is because
-# it is not available as an array method. Which aggregate function was this?
+# Two of the aggregate functions that we used as NumPy functions were not used as array methods. This is because
+# they are not available as array methods. Which aggregate functions were they?
 
 ''' Your answer here. '''
 

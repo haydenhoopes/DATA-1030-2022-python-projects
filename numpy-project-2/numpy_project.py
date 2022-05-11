@@ -56,8 +56,9 @@ iphone_sales = [215.05, 190.26, 169.22, 231.22, 211.88, 216.76, 217.72, 220.48, 
 # 28 records of sales).
 
 # *********  QUESTION 6  *********
-# Create a NumPy array with 7 columns and 4 rows where each column represents a day of the week and each
-# each row represents a week. Make up sales data that you would expect from a burrito truck.
+# Create a NumPy array with 7 columns and 4 rows where each column represents a day
+# of the week and each each row represents a week. Make up sales data that you would
+# expect from a burrito truck.
 
 # Your code here
 
@@ -70,8 +71,9 @@ iphone_sales = [215.05, 190.26, 169.22, 231.22, 211.88, 216.76, 217.72, 220.48, 
 
 
 # *********  QUESTION 8  *********
-# According to the data in the `burrito_sales` array, what was the amount of the highest selling day during
-# the first month of business? Print out the answer.
+# According to the data in the `burrito_sales` array, what was the amount of the 
+# highest selling day during the first month of business? Use the `np.amax()` 
+# function or the `.max()` method. Print out the answer.
 
 # Your code here
 
