@@ -123,17 +123,29 @@ print(sd)
 
 
 # *********  QUESTION 13  *********
-# The restaurant's accountant (Bob) wants to know how many days had sales amounts that were outliers.
-# Assuming that an outlier is anything greater than the Inner Quartile Range (IQR) multiplied by 1.5, are there 
-# any outliers? How many are there? Get back an array of values greater than 1.5 times the IQR and print out its
-# length. You can get 1.5 times the IQR by using the quantile function:
-#   (np.quantile(array, .75) - np.quantile(array, .25)) * 1.5.
-#   - Print out 1.5 times the IQR
-#   - Print out the number of items that are outliers.
-# Any number greater than this number would be considered an outlier.
+# The restaurant's accountant (Bob) wants to know how many days had sales amounts 
+# that were outliers. Use the function `get_burrito_sales_outliers()` below to 
+# RETURN an array of burrito sales that are outliers. Then, print out the results of
+# the function. You should add a single line of code inside of the function and a
+# single line of code after the function to test it.
 
-outlier_limit = (np.quantile(burrito_sales, .75) - np.quantile(burrito_sales, .25)) * 1.5
+# Be sure to uncomment the lines of code that say # UNCOMMENT ME at the end.
 
-print(outlier_limit)
+# Outliers are values that are far away from the average. We can check if a value is
+# an outlier by using the function below:
 
-print(len(burrito_sales[ burrito_sales > outlier_limit]))
+def get_burrito_sales_outliers(array):
+    # The Inner-Quartile Range is the 75th percentile minus the 25th percentile.
+    iqr = np.quantile(burrito_sales, .75) - np.quantile(burrito_sales, .25)
+
+    # We multiply the IQR by 1.5 and then add the resulting number onto the value
+    # located at the 75th percentile called `upper_threshold`. Any number greater
+    # than the upper threshold is considered an outlier.
+    upper_threshold = np.quantile(burrito_sales, .75) + (iqr * 1.5)
+
+    # Use NumPy to return an array of burrito sales greater than `upper_threshold`.
+    # Remember that because you are inside of a function, you should use the local
+    # variable `array` instead of `burrito_sales`.
+    return array[array > upper_threshold]
+
+get_burrito_sales_outliers(burrito_sales)

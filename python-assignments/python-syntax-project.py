@@ -16,12 +16,10 @@
 
 # ********  QUESTION 2  ********
 # Make two functions: circumferenceOfCircle() and areaOfCircle().
-# Each function returns and prints the circumference/area of a circle given a 
+# Each function returns and prints the circumference of a circle given a 
 # radius. You can use the variable PI as an approximation of pi.
 # Below each function definition, call the function using a made up value
 # to show that it works.
-
-PI = 3.141592
 
 # Your code here
 
@@ -35,3 +33,7 @@ PI = 3.141592
 # it works.
 
 # Your code here
+def typeOfVariable(variable):
+    print("The variable is " + str(variable) + " and its type is " + str(type(variable)))
+
+typeOfVariable(8.32)
